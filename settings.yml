@@ -1,0 +1,23 @@
+use_default_settings: true
+
+general:
+  debug: false
+  instance_name: "SearXNG Instance"
+  donation_url: false
+  contact_url: false
+
+search:
+  safe_search: 0
+  autocomplete: "duckduckgo"
+  formats:
+    - html
+    - json
+
+server:
+  port: 8080
+  bind_address: "0.0.0.0"
+  limiter: true
+
+redis:
+  # The URL will be overridden at runtime via SEARXNG_REDIS_URL environment variable
+  url: redis://localhost:6379/0

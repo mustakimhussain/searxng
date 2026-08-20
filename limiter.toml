@@ -4,10 +4,5 @@ x_for = 1
 
 [botdetection.ip_limit]
 # Link requests per time window
+filter_link_local = true
 link_token = true
-filter = true
-
-[botdetection.ip_limit.search]
-# Maximum requests allowed per IP per time window
-capacity = 30
-ip_limit_time = 60

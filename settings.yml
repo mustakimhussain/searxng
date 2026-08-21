@@ -9,6 +9,7 @@ general:
 search:
   safe_search: 0
   autocomplete: "duckduckgo"
+  default_lang: "auto"
   formats:
     - html
     - json
@@ -17,7 +18,53 @@ server:
   port: 8080
   bind_address: "0.0.0.0"
   limiter: true
+  
+outgoing:
+  request_timeout: 5.0
+  max_request_timeout: 15.0
 
 redis:
   # The URL will be overridden at runtime via SEARXNG_REDIS_URL environment variable
   url: redis://localhost:6379/0
+
+engines:
+  # General web engines
+  - name: bing
+    disabled: false
+
+  - name: brave
+    disabled: false
+
+  - name: duckduckgo
+    disabled: false
+
+  - name: google
+    disabled: false
+
+  - name: google cse
+    disabled: false
+
+  - name: mojeek
+    disabled: false
+
+  - name: qwant
+    disabled: false
+
+  - name: startpage
+    disabled: false
+
+  # Reference and specialist engines
+  - name: wikipedia
+    disabled: false
+
+  - name: wikidata
+    disabled: false
+
+  - name: currency
+    disabled: false
+
+  - name: dictzone
+    disabled: false
+
+  - name: 1x
+    disabled: false

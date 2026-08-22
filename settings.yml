@@ -15,6 +15,7 @@ search:
     - json
 
 server:
+  secret_key: "${SEARXNG_SECRET}"
   port: 8080
   bind_address: "0.0.0.0"
   limiter: true
@@ -23,9 +24,8 @@ outgoing:
   request_timeout: 5.0
   max_request_timeout: 15.0
 
-redis:
-  # The URL will be overridden at runtime via SEARXNG_REDIS_URL environment variable
-  url: redis://localhost:6379/0
+valkey:
+  url: "${SEARXNG_VALKEY_URL}"
 
 engines:
   # General web engines

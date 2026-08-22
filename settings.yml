@@ -37,6 +37,7 @@ engines:
 
   - name: duckduckgo
     disabled: false
+    timeout: 10.0
 
   - name: google
     disabled: false
@@ -46,19 +47,22 @@ engines:
 
   - name: mojeek
     disabled: false
+    timeout: 10.0
 
   - name: qwant
     disabled: false
+    timeout: 10.0
 
   - name: startpage
     disabled: false
+    timeout: 10.0
 
   # Reference and specialist engines
   - name: wikipedia
     disabled: false
 
-  - name: wikidata
-    disabled: false
+  #- name: wikidata
+  #  disabled: false
 
   - name: currency
     disabled: false
